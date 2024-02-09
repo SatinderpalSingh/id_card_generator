@@ -1,0 +1,71 @@
+table, th, td {
+  border: 0.7mm solid black;
+}
+
+table {
+  border-spacing: 1.5mm;
+}
+
+td {
+  border-width: 1px;
+  border-color: black;
+  width: 54mm;
+  height: 85.5mm;
+  background-image: url('./Images/template3.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.second-section {
+  text-transform: uppercase;
+}
+
+#child-image {
+  width: 16.5mm;
+  height: 16.5mm;
+  margin-left: 17.5mm;
+  margin-bottom: 1.8mm;
+  border-radius: 3.4mm;
+  position: relative;
+  top: 2mm;
+}
+
+.child-name {
+  color: red;
+  font-size: 3.5mm;
+  margin-left: 10mm;
+  position: relative;
+  top: 1mm;
+  font-weight: bold;
+}
+
+.child-class {
+  font-size: 2.2mm;
+  margin-left: 19.5mm;
+  margin-bottom: 0.9mm;
+  position: relative;
+  top: 1mm;
+  font-weight: bold;
+}
+
+.child-details {
+  font-size: 2.5mm;
+  text-align: left;
+  padding-left: 4mm;
+  padding-right: 4mm;
+  position: relative;
+  top: 2mm;
+}
+
+.red-details {
+  color: red;
+  font-weight: bold;
+}
+
+.space-right {
+  margin-right: 1mm;
+}
+
+.space-left {
+  margin-left: 1mm;
+}
