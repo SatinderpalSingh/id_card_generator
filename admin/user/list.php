@@ -54,7 +54,7 @@
 							<td><?php echo ucwords($row['name']) ?></td>
 							<td ><p class="m-0 truncate-1"><?php echo $row['username'] ?></p></td>
 							<td><?php echo ($row['type'] == 1) ? 'Administrator' : 'Staff' ?></td>
-							<td align="center">
+							<td >
 								 <button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 				                  		Action
 				                    <span class="sr-only">Toggle Dropdown</span>
