@@ -100,7 +100,7 @@
 							<form action="school/id_cards_pdf/main/template_1.php" id="edit_student" method="post">
 								<input type="hidden" name="school_id" value="<?php echo $_settings->userdata('id') ?>">
 								<input type="hidden" name="class" value="<?php echo $row['class']; ?>">
-
+												<!-- HOVER HTML CODE -->
 								<button class="openModalBtn">Select Template</button>
 								<div id="myModal" class="modal">
 									<div class="modal-content">
@@ -161,4 +161,8 @@
 function showModal(rowIndex) {
   document.getElementById('myModal').style.display = "block";
 }
+document.querySelector('.close').addEventListener('click', function() {
+  document.getElementById('myModal').style.display = "none";
+});
+
 </script>
