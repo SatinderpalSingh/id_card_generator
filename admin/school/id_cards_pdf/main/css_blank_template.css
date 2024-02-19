@@ -1,117 +1,129 @@
-  body {
-    background-color: rgb(255, 255, 255);
-  }
+body {
+  background-color: rgb(255, 255, 255);
+}
 
-  table,
-  th,
-  td {
-    border: 0.7mm solid black;
-  }
+table,
+th,
+td {
+  border: 0.7mm solid black;
+}
 
-  table {
-    border-spacing: 1.5mm;
-  }
+table {
+  border-spacing: 1.5mm;
+}
 
-  td {
-    border-width: 1px;
-    border-color: black;
-    width: 54mm;
-    height: 85.5mm;
-    background-image: url('./Images/Blank_template.png');
-    background-size: 101%;
-    background-repeat: no-repeat;
+td {
+  border-width: 1px;
+  border-color: black;
+  width: 54mm;
+  height: 85.5mm;
+  background-image: url('./Images/Blank_template.png');
+  background-size: 101%;
+  background-repeat: no-repeat;
+  vertical-align: top;
 
-  }
-  .first_section{
-    position: relative;
-    bottom: 8mm;
-  }
-  #institute_logo{
-    position: relative;
-    width: 11mm;
-    height: 11mm;
-    border-radius: 2.64mm;
-    top: 2mm;
-    left: 2.5mm;
-  }
-  #institute_name{
-    height: 7.9mm;
-    width: 41.5mm;
-    position: relative;
-    bottom: 8mm;
-    left: 15mm;
-    font-size: 3.1mm;
-    text-align: left;
-    display: block;
-    line-height:5mm;
-    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-    font-weight: bolder;
-    color: white;
+}
+.first_section{
+  position: relative;
+  /* bottom: 8mm; */
+  height: 17mm;
+}
+#institute_logo{
+  position: relative;
+  width: 11mm;
+  height: 11mm;
+  border-radius: 2.64mm;
+  top: 2mm;
+  left: 2.5mm;
+}
+#institute_name{
+  height: 7.9mm;
+  width: 41.5mm;
+  position: relative;
+  bottom: 8mm;
+  left: 15mm;
+  font-size: 3.1mm;
+  text-align: left;
+  display: block;
+  line-height:5mm;
+  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-weight: bolder;
+  color: white;
 
-  }
+}
+.second_section {
+  text-transform: uppercase;
+  position: relative;
+  height: 59mm;
+  text-wrap:wrap;
+  padding-top: 3%;
+  overflow: hidden;
+}
+
+#child-image{
+  width: 15.5mm;
+  height: 15.5mm;
+  margin-left: 19mm;
+  margin-bottom: 1.8mm;
+  border-radius: 3.4mm;
+  position: relative;
+  top: 3mm;
+}
+
+.child-name {
+  color: red;
+  font-size: 3.5mm;
+  /* margin-left: 10mm; */
+  position: relative;
+  padding-left: 1mm;
+    padding-right: 1mm;
+  top: 1mm;
+  font-weight: bold;
+  text-align: center;
+}
+
+.child-class {
+  font-size: 2.2mm;
+  margin-bottom: 0.9mm;
+  position: relative;
+  text-align: center;
+  top: 1mm;
+  font-weight: bold;
+}
+
+.child-details {
+  font-size: 2.5mm;
+  text-align: left;
+  padding-left: 4mm;
+  padding-right: 4mm;
+  position: relative;
+  top: 2mm;
+  text-wrap: wrap;
+  line-height: 3.4mm;
+}
+
+.red_details {
+  color: red;
+  font-weight: bold;
+  text-wrap: wrap;
+}
+#stud_address{
+  text-align: center;
+}
+#little_space {
+  margin-right: 1mm;
+}
+
+#space-left {
+  margin-left: 1mm;
+}
+.third_section{
+  position: relative;
+  font-size: 2.5mm;
+  text-align: center;
+  padding-top: 1%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  height: 7mm;
   
-  .second_section {
-    text-transform: uppercase;
-    position: relative;
-    bottom: 7mm;
-  }
-
-  #child-image{
-    width: 16.5mm;
-    height: 16.5mm;
-    margin-left: 17.5mm;
-    margin-bottom: 1.8mm;
-    border-radius: 3.4mm;
-    position: relative;
-    top: 2mm;
-  }
-
-  .child-name {
-    color: red;
-    font-size: 3.5mm;
-    /* margin-left: 10mm; */
-    position: relative;
-    top: 1mm;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .child-class {
-    font-size: 2.2mm;
-    margin-left: 19.5mm;
-    margin-bottom: 0.9mm;
-    position: relative;
-    top: 1mm;
-    font-weight: bold;
-  }
-
-  .child-details {
-    font-size: 2.5mm;
-    text-align: left;
-    padding-left: 4mm;
-    padding-right: 4mm;
-    position: relative;
-    top: 2mm;
-  }
-
-  .red_details {
-    color: red;
-    font-weight: bold;
-  }
-
-  #little_space {
-    margin-right: 1mm;
-  }
-
-  #little_space2 {
-    margin-left: 1mm;
-  }
-  .third_section{
-    position: relative;
-    font-size: 2.5mm;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 8mm;
-    color: white;
-    
-  }
+}
