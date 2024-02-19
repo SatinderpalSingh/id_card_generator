@@ -13,7 +13,7 @@
 <?php
 // Assuming $conn is your database connection
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["update_student_data"] == "update_student_data") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["update_student_data"]) && $_POST["update_student_data"] == "update_student_data"){
     $admissionNo = $_POST["student_id"];
     $names = $_POST["names"];
     $class = $_POST["class"];
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["update_student_data"] == "u
     $fatherName = $_POST["father_name"];
     $motherName = $_POST["mother_name"];
     $contactNo = $_POST["contact_no"];
-    $address = $_POST["address"];
+    $address = $_POST["address"];   
 
     // Update the data in the database
     $updateQuery = "UPDATE `student_data` SET
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"  && $_POST["update_student_data"] == "u
 }
 
 // File upload handling
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["photo_check"] == "photo_check") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["photo_check"]) && $_POST["photo_check"] == "photo_check") {
     // Check if the file was uploaded without errors
     if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0) {
         $targetDir = "../uploads/S_photos/"; // Directory where uploaded files will be saved
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["photo_check"] == "photo_chec
 			while($row = $qry->fetch_assoc()):
 			$qry_count = $conn->query("SELECT *  FROM `student_data` WHERE `admission_no` = '".$row['admission_no']."' and `school_id` = '".$_POST['school_id']."' and photo_name IS NULL; ");
 			//echo "SELECT *  FROM `student_data` WHERE `admission_no` = '".$row['admission_no']."' and `school_id` = '".$_POST['school_id']."' and photo_name IS NULL";
-			echo "<br><br>";
+			
 			$count_rows = $qry_count->num_rows;
 			if ($count_rows ==0)
 			{$photo_available='Available';} else {$photo_available='NA';}
