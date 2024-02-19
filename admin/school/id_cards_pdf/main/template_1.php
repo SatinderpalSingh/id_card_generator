@@ -21,7 +21,7 @@
             <span id='institute_name'>".$row_sc['firstname']."</span>
         </div>
         <div class='second_section'>
-        <img id='child-image' src='./Images/stud.webp' ><br>
+        <img id='child-image' src='../../../../uploads/S_photos/{$student_data['photo_name']}' ><br>
           <div class='child-name'>{$student_data['names']}</div>
           <div class='child-class'>Class: {$student_data['class']}</div>
           <div class='child-details'>
