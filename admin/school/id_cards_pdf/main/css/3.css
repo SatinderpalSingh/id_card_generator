@@ -17,7 +17,7 @@ td {
   border-color: black;
   width: 54mm;
   height: 85.5mm;
-  background-image: url('./Images/Blank_template.png');
+  background-image: url('../template_images/3.png');
   background-size: 101%;
   background-repeat: no-repeat;
   vertical-align: top;
@@ -26,7 +26,7 @@ td {
 .first_section{
   position: relative;
   /* bottom: 8mm; */
-  height: 17mm;
+  height: 12mm;
 }
 #institute_logo{
   position: relative;
@@ -40,7 +40,7 @@ td {
   height: 7.9mm;
   width: 41.5mm;
   position: relative;
-  bottom: 8mm;
+  bottom: 10mm;
   left: 15mm;
   font-size: 3.1mm;
   text-align: left;
@@ -49,25 +49,26 @@ td {
   /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
   font-weight: bolder;
   color: white;
+  
 
 }
 .second_section {
   text-transform: uppercase;
   position: relative;
-  height: 59mm;
+  height: 65mm;
   text-wrap:wrap;
   padding-top: 3%;
   overflow: hidden;
 }
 
 #child-image{
-  width: 15.5mm;
-  height: 15.5mm;
-  margin-left: 19mm;
-  margin-bottom: 1.8mm;
-  border-radius: 3.4mm;
+  width: 17.3mm;
+  height: 17.3mm;
+  margin-left: 19.4mm;
+  /* margin-bottom: 1.8mm; */
+  border-radius: 13mm;
   position: relative;
-  top: 3mm;
+  top: -1.1mm; 
 }
 
 .child-name {

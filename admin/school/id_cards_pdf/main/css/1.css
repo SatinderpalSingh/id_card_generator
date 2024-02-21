@@ -17,7 +17,7 @@ td {
   border-color: black;
   width: 54mm;
   height: 85.5mm;
-  background-image: url('./Images/Blank_template.png');
+  background-image: url('../template_images/1.png');
   background-size: 101%;
   background-repeat: no-repeat;
   vertical-align: top;
