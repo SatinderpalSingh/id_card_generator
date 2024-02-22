@@ -39,6 +39,15 @@ Class Users extends DBConnection {
 						unlink('../'.$_SESSION['userdata']['avatar']);
 				}
 		}
+		// SIGNATURE
+		if(isset($_FILES['signatureImg']) && $_FILES['signatureImg']['tmp_name'] != ''){
+			$fname = 'admin/school/id_cards_pdf/main/Images/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['signatureImg']['name'];
+			$move = move_uploaded_file($_FILES['signatureImg']['tmp_name'],'../'. $fname);
+			if($move){
+				$data .=" , signature = '{$fname}' ";
+			}
+	}
+	
 		if(empty($id)){
 			$qry = $this->conn->query("INSERT INTO users set {$data}");
 			if($qry){
