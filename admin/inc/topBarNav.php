@@ -1,5 +1,5 @@
 <style>
-  <?php include 'CSS/bootstrap.min.css'; ?>
+  <?php include 'css/bootstrap.min.css'; ?>
 </style>
 
 <body>
