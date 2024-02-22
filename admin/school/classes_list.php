@@ -199,7 +199,7 @@
 												<button onclick="selectTemplate(event)" id="submitBtn">Submit</button>
 											</div>
 									</div>
-									<input type="submit" class="btn btn-sm btn-primary" value="Generate " />
+									<!-- <input type="submit" class="btn btn-sm btn-primary" value="Generate " /> -->
 								</form>
 							</span>
 							
