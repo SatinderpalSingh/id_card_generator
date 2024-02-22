@@ -33,6 +33,10 @@ foreach($user->fetch_array() as $k =>$v){
 					<small><i>Leave this blank if you dont want to change the password.</i></small>
 				</div>
 				<div class="form-group">
+					<label for="address">Address</label>
+					<input type="text" name="address" id="address" class="form-control" value="<?php echo isset($meta['address']) ? $meta['address']: '' ?>" required  autocomplete="off">
+				</div>
+				<div class="form-group">
 					<label for="" class="control-label"> Logo</label>
 					<div class="custom-file">
 		              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">

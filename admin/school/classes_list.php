@@ -144,7 +144,7 @@
 								<form action="school/id_cards_pdf/main/template_1.php" id="edit_student" method="post">
 									<input type="hidden" name="school_id" value="<?php echo $_settings->userdata('id') ?>">
 									<input type="hidden" name="class" value="<?php echo $row['class']; ?>">
-									<input type="hidden" name="chosen_template" value="css_blank_template" id="chosen_template">
+									<input type="hidden" name="chosen_template" value="1" id="chosen_template">
 									<!-- POPUP HTML CODE -->
 									<div id="myModal" class="modal">
 											<div class="modal-content">
@@ -155,43 +155,43 @@
 												<h2>Select The Template</h2>
 												<div id="imageGallery">
 													<div class="image-item ">
-														<img src="/id_card_generator_copy/admin/school/Images/Blank_template.png" alt="template1" srcset="">
+														<img src="school/id_cards_pdf/main/template_images/1.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="1">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/3.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/3.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="3">
 													</div>
 													<div class="image-item ">
-														<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/2.png" alt="template1" srcset="">
+														<img src="school/id_cards_pdf/main/template_images/2.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="2">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/4.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/4.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="4">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/5.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/5.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="5">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/7.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/7.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="7">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/6.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/6.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="6">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/8.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/8.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="8">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/9.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/9.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="9">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/10.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/10.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="10">
 													</div>
 												
