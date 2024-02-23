@@ -54,7 +54,13 @@
           <i class="nav-icon fas fa-id-card"></i>
           <span>ADD SCHOOL USER</span>
         </a>
-      </li><!-- End Tables Nav -->
+      </li>
+      
+      <a href="<?php echo base_url ?>admin/?page=templates" class="nav-link collapsed">
+          <i class="nav-icon fas fa-id-card"></i>
+          <span>ID TEMPLATES</span>
+        </a>
+        <!-- End Tables Nav -->
 
       <li class="nav-item">
         <!-- <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> -->
