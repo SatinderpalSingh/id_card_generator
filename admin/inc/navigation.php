@@ -1,5 +1,5 @@
 <style>
-  <?php include 'CSS/style.css'; ?>
+  <?php include 'css/style.css'; ?>
 </style>
 <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
 

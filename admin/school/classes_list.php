@@ -155,43 +155,43 @@
 												<h2>Select The Template</h2>
 												<div id="imageGallery">
 													<div class="image-item ">
-														<img src="/id_card_generator_copy/admin/school/Images/Blank_template.png" alt="template1" srcset="">
+														<img src="school/Images/Blank_template.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="1">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/3.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/3.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="3">
 													</div>
 													<div class="image-item ">
-														<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/2.png" alt="template1" srcset="">
+														<img src="school/id_cards_pdf/main/template_images/2.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="2">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/4.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/4.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="4">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/5.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/5.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="5">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/7.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/7.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="7">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/6.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/6.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="6">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/8.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/8.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="8">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/9.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/9.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="9">
 													</div>
 													<div class="image-item ">
-													<img src="/id_card_generator_copy/admin/school/id_cards_pdf/main/template_images/10.png" alt="template1" srcset="">
+													<img src="school/id_cards_pdf/main/template_images/10.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="10">
 													</div>
 												
