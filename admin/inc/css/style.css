@@ -16,6 +16,23 @@
 #nav_logo{
   display: inline-block;
 }
+
+
+#toggle_button{
+  font-size: 3vh;
+  border: 0;
+  background-color: white;
+  
+}
+@media (max-width: 1199px) {
+  #toggle_button{
+    margin-left: 8vw;
+    margin-right: 5vw;
+
+  }
+
+  
+}
 body {
   font-family: "Open Sans", sans-serif;
   background: #f6f9ff;
@@ -382,12 +399,14 @@ h6 {
 .header {
   transition: all 0.5s;
   z-index: 997;
-  height: 60px;
+  height: auto;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  width: 115vw;
   /* Toggle Sidebar Button */
   /* Search Bar */
+  margin-left: 10px;
 }
 
 .header .toggle-sidebar-btn {
@@ -613,16 +632,16 @@ h6 {
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  /* background-color: #fff */
+  background-color: #fff
 /* background: #C9284F;
 background: linear-gradient(135deg, #C9284F, #2071CF); */
 }
 
-/* @media (max-width: 1199px) {
+@media (max-width: 1199px) {
   .sidebar {
     left: -300px;
   }
-} */
+}
 
 .sidebar::-webkit-scrollbar {
   width: 5px;

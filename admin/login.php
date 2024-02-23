@@ -6,8 +6,27 @@
    .page-header{
       text-shadow: 3px 2px #d8d8d899;
    }
+   body{
+    background-image: url('login_background.jpg');
+   
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+   }
+   .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+            mix-blend-mode: multiply; /* This blend mode will reduce the brightness of the background image */
+        }
  </style>
 <body class="hold-transition login-page ">
+  <div class="overlay">
+
+  </div>
   <script>
     start_loader()
   </script>

@@ -108,9 +108,14 @@
 		display: flex;
 		gap: 5px;
 	}
-	
+	@media (max-width: 478px) {
+  
+		#classes_list{
+			width: 110vw;
+		}
+}
 </style>
-<div class="card card-outline card-primary">
+<div class="card card-outline card-primary" id="classes_list">
 	<div class="card-header">
 		<h3 class="card-title" id="heading">List of Classes</h3>
 		<div class="card-tools">
