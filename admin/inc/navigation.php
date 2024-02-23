@@ -50,11 +50,26 @@
       </li><!-- End Forms Nav -->
 
       <li class="nav-item">
-        <a href="<?php echo base_url ?>admin/?page=templates" class="nav-link collapsed">
+        <a href="<?php echo base_url ?>admin/?page=add-school" class="nav-link collapsed">
+          <i class="nav-icon fas fa-id-card"></i>
+          <span>ADD SCHOOL USER</span>
+        </a>
+      </li>
+      
+      <a href="<?php echo base_url ?>admin/?page=templates" class="nav-link collapsed">
           <i class="nav-icon fas fa-id-card"></i>
           <span>ID TEMPLATES</span>
         </a>
-      </li><!-- End Tables Nav -->
+        <!-- End Tables Nav -->
+
+      <li class="nav-item">
+        <!-- <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> -->
+        <a href="<?php echo base_url ?>admin/?page=generate" class="nav-link collapsed">
+          <i class="nav-icon fas fa-id-card-alt"></i>
+          <span>GENERATE ID </span>
+        </a>
+      </li><!-- End Forms Nav -->
+
     <?php endif; ?>
     <?php if ($_settings->userdata('type') == 1   &&  $_settings->userdata('usertype') == 'admin') : ?>
       <li class="nav-item">

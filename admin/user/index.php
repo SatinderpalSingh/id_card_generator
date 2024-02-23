@@ -33,6 +33,10 @@ foreach($user->fetch_array() as $k =>$v){
 					<small><i>Leave this blank if you dont want to change the password.</i></small>
 				</div>
 				<div class="form-group">
+					<label for="address">Address</label>
+					<input type="text" name="address" id="address" class="form-control" value="<?php echo isset($meta['address']) ? $meta['address']: '' ?>" required  autocomplete="off">
+				</div>
+				<div class="form-group">
 					<label for="" class="control-label"> Logo</label>
 					<div class="custom-file">
 		              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">
@@ -42,6 +46,20 @@ foreach($user->fetch_array() as $k =>$v){
 				<div class="form-group d-flex justify-content-center">
 					<img src="<?php echo validate_image(isset($meta['avatar']) ? $meta['avatar'] :'') ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
 				</div>
+
+
+				<div class="form-group">
+					<label for="" class="control-label"> Signature</label>
+					<div class="custom-file">
+		              <input type="file" class="custom-file-input rounded-circle" id="custom" name="signatureImg" onchange="displayImage(this,$(this))">
+		              <label class="custom-file-label" for="custom">Choose file</label>
+		            </div>
+				</div>
+				<div class="form-group d-flex justify-content-center">
+					<img src="<?php echo validate_image(isset($meta['signature']) ? $meta['signature'] :'') ?>" alt="" id="sign_img" class="img-fluid img-thumbnail">
+				</div>
+
+
 			</form>
 		</div>
 	</div>
@@ -60,6 +78,12 @@ foreach($user->fetch_array() as $k =>$v){
 		object-fit: cover;
 		border-radius: 100% 100%;
 	}
+	img#sign_img{
+		height: 15vh;
+		width: 15vh;
+		object-fit: cover;
+		border-radius: 100% 100%;
+	}
 </style>
 <script>
 	function displayImg(input,_this) {
@@ -67,6 +91,16 @@ foreach($user->fetch_array() as $k =>$v){
 	        var reader = new FileReader();
 	        reader.onload = function (e) {
 	        	$('#cimg').attr('src', e.target.result);
+	        }
+
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
+	function displayImage(input,_this) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	        	$('#sign_img').attr('src', e.target.result);
 	        }
 
 	        reader.readAsDataURL(input.files[0]);

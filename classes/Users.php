@@ -39,6 +39,15 @@ Class Users extends DBConnection {
 						unlink('../'.$_SESSION['userdata']['avatar']);
 				}
 		}
+		// SIGNATURE
+		if(isset($_FILES['signatureImg']) && $_FILES['signatureImg']['tmp_name'] != ''){
+			$sign_fname = 'admin/school/id_cards_pdf/main/Images/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['signatureImg']['name'];
+			$move = move_uploaded_file($_FILES['signatureImg']['tmp_name'],'../'. $sign_fname);
+			if($move){
+				$data .=" , signature = '{$sign_fname}' ";
+			}
+		}
+	
 		if(empty($id)){
 			$qry = $this->conn->query("INSERT INTO users set {$data}");
 			if($qry){
@@ -68,6 +77,32 @@ Class Users extends DBConnection {
 			
 		}
 	}
+
+	public function add_school() {
+		extract($_POST);
+		$data = '';
+
+		// check username exists
+		$chk = $this->conn->query("SELECT * FROM `users` where username ='{$username}';")->num_rows;
+		if($chk > 0){
+			return 3;
+			exit;
+		}
+		$firstname = $_POST['firstname'];
+		$password = $_POST['password'];
+		$username = $_POST['username'];
+		$password = md5($password);
+
+		$qry = $this->conn->query("INSERT INTO users (`firstname`,`username`,`password`,`type`) VALUES ('$firstname', '$username', '$password',1);");
+		
+		if($qry) {
+			$this->settings->set_flashdata('success','New User Details successfully saved.');
+			return 1; 
+		} 
+		else return 2;
+
+	}
+
 	public function delete_users(){
 		extract($_POST);
 		$avatar = $this->conn->query("SELECT avatar FROM users where id = '{$id}'")->fetch_array()['avatar'];
@@ -177,6 +212,9 @@ $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
 switch ($action) {
 	case 'save':
 		echo $users->save_users();
+	break;
+	case 'add-school':
+		echo $users->add_school();
 	break;
 	case 'fsave':
 		echo $users->save_fusers();

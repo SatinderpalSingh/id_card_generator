@@ -144,7 +144,7 @@
 								<form action="school/id_cards_pdf/main/template_1.php" id="edit_student" method="post">
 									<input type="hidden" name="school_id" value="<?php echo $_settings->userdata('id') ?>">
 									<input type="hidden" name="class" value="<?php echo $row['class']; ?>">
-									<input type="hidden" name="chosen_template" value="css_blank_template" id="chosen_template">
+									<input type="hidden" name="chosen_template" value="1" id="chosen_template">
 									<!-- POPUP HTML CODE -->
 									<div id="myModal" class="modal">
 											<div class="modal-content">
@@ -155,7 +155,7 @@
 												<h2>Select The Template</h2>
 												<div id="imageGallery">
 													<div class="image-item ">
-														<img src="school/Images/Blank_template.png" alt="template1" srcset="">
+														<img src="school/id_cards_pdf/main/template_images/1.png" alt="template1" srcset="">
 														<input type="radio" name="template" id="1">
 													</div>
 													<div class="image-item ">
@@ -199,7 +199,7 @@
 												<button onclick="selectTemplate(event)" id="submitBtn">Submit</button>
 											</div>
 									</div>
-									<input type="submit" class="btn btn-sm btn-primary" value="Generate " />
+									<!-- <input type="submit" class="btn btn-sm btn-primary" value="Generate " /> -->
 								</form>
 							</span>
 							
