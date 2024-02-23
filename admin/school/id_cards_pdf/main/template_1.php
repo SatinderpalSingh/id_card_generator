@@ -40,7 +40,8 @@
         <div class='third_section'>
             <span>".$row_sc['address']."</span>
             <br><span>Contact No. ".$row_sc['contact']."</span>
-          </div>
+        </div>
+        <img src='../../../../{$row_sc['signature']}' height='15mm' width='15mm' />
       </td>";
       
     $i++;

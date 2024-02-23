@@ -41,10 +41,10 @@ Class Users extends DBConnection {
 		}
 		// SIGNATURE
 		if(isset($_FILES['signatureImg']) && $_FILES['signatureImg']['tmp_name'] != ''){
-			$fname = 'admin/school/id_cards_pdf/main/Images/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['signatureImg']['name'];
-			$move = move_uploaded_file($_FILES['signatureImg']['tmp_name'],'../'. $fname);
+			$sign_fname = 'admin/school/id_cards_pdf/main/Images/'.strtotime(date('y-m-d H:i')).'_'.$_FILES['signatureImg']['name'];
+			$move = move_uploaded_file($_FILES['signatureImg']['tmp_name'],'../'. $sign_fname);
 			if($move){
-				$data .=" , signature = '{$fname}' ";
+				$data .=" , signature = '{$sign_fname}' ";
 			}
 	}
 	
