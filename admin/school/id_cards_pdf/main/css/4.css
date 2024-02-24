@@ -1,3 +1,7 @@
+@page {
+  margin-top: 5mm; /* Adjust top margin as needed */
+  margin-bottom: 5mm; /* Adjust bottom margin as needed */
+}
 body {
     background-color: rgb(255, 255, 255);
   }
@@ -127,5 +131,26 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     height: 7mm;
+  }
+  #principal_sign{
+    position: relative;
+    top: -4.7mm;
+    right: -3.5mm;
     
+  }
+  #principal_sign span {
+    font-size: 2.2mm;
+    position: relative;
+    left: 40%;
+    top: 1.5mm;
+    color: rgb(12, 129, 202);
+    font-weight: bolder;
+  }
+  
+  #principal_sign img {
+    height: 4mm;
+    width: 12mm;
+    position: relative;
+    left: 67.5%;
+    top: 0mm;
   }

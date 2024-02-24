@@ -56,19 +56,23 @@
           <div class='child-class'>Class: {$student_data['class']}</div>
           <div class='child-details'>
             <span class='red_details space-right'>F.Name</span>: {$student_data['father_name']}<br>
+            <span id='mother_name'>
             <span class='red_details'>M.Name</span>: {$student_data['mother_name']}<br>
+            </span>
             <span class='red_details'>Mob. No</span>: {$student_data['contact_no']}<br>
             <span class='red_details'>Adm. No</span> : {$student_data['admission_no']}<br>
             <span class='red_details space-left'>D.O.B</span> : {$student_data['date_of_birth']}<br>
-            <br>
             <span class='red_details'>Address</span>: {$student_data['address']} 
           </div>
         </div>
+        <div id ='principal_sign'> 
+        <img src='$signature'  />
+        <span>Principal's Sign</span>
+        </div>
         <div class='third_section'>
             <span>".$row_sc['address']."</span>
-            <br><span>Contact No. ".$row_sc['contact']."</span>
+            <br><span id='contact_no'>Contact No. ".$row_sc['contact']."</span>
         </div>
-        <img src='$signature' height='15mm' width='15mm' />
       </td>";
       
     $i++;
