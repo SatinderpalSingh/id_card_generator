@@ -14,17 +14,44 @@
   $table = "<link rel='stylesheet' href='./css/$chosen_template'><table><tbody><tr>";
   $i = 0;
   foreach($result as $student_data) {
-    $student_image = $student_data['photo_name'] ?? "placeholder-student.jpg";
-    $logo = $row_sc['avatar'] ?? "admin/school/id_cards_pdf/main/Images/placeholder-logo.png";
+
+    $student_image = "../../../../uploads/S_photos/";
+    $logo = "../../../../";
+    $signature = "../../../../";
+
+    // check student image
+    if(file_exists($student_image.$student_data['photo_name']) && !is_dir($student_image.$student_data['photo_name'])) {
+      $student_image .= $student_data['photo_name'];
+    } else {
+      $student_image .= "placeholder-student.jpg";
+    }
+    clearstatcache();
+
+    // check logo
+    if(file_exists($logo.$row_sc['avatar']) && !is_dir($logo.$row_sc['avatar'])) {
+      $logo .= $row_sc['avatar'];
+    } else {
+      $logo .= "admin/school/id_cards_pdf/main/Images/placeholder-logo.png";
+    }
+    clearstatcache();
+
+    // check signature
+    if(file_exists($signature.$row_sc['signature']) && !is_dir($signature.$row_sc['signature'])) {
+      $signature .= $row_sc['signature'];
+    } else {
+      $signature .= "admin/school/id_cards_pdf/main/Images/placeholder-signature.png";
+    }
+    clearstatcache();
+
     if($i % 5 == 0 && $i != 0) $table .= "</tr><tr>";
     $table .= 
       "<td>
         <div class='first_section'>
-            <img src='../../../../".$logo."' alt='' srcset='' id='institute_logo'>
+            <img src='".$logo."' alt='' srcset='' id='institute_logo'>
             <span id='institute_name'>".$row_sc['firstname']."</span>
         </div>
         <div class='second_section'>
-        <img id='child-image' src='../../../../uploads/S_photos/{$student_image}' ><br>
+        <img id='child-image' src='{$student_image}' ><br>
           <div class='child-name'>{$student_data['names']}</div>
           <div class='child-class'>Class: {$student_data['class']}</div>
           <div class='child-details'>
@@ -41,7 +68,7 @@
             <span>".$row_sc['address']."</span>
             <br><span>Contact No. ".$row_sc['contact']."</span>
         </div>
-        <img src='../../../../{$row_sc['signature']}' height='15mm' width='15mm' />
+        <img src='$signature' height='15mm' width='15mm' />
       </td>";
       
     $i++;
