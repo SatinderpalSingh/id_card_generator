@@ -116,8 +116,8 @@
       
       <?php if ($_settings->userdata('type') == 1  &&  $_settings->userdata('usertype') == 'admin') : ?>
         <button type="button" class="btn btn-info">
-          <a href="<?php echo base_url ?>admin/?page=generate" class="nav-link collapsed">
-            <span>GENERATE ID </span>
+          <a href="<?php echo base_url ?>admin/?page=school/classes_list_admin" class="nav-link collapsed">
+            <span>GENERATE ID CARD</span>
           </a>
         </button>
 
