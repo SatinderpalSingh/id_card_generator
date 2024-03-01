@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["photo_check"]) && $_PO
         }
 
         // Check file size (adjust as needed)
-        if ($_FILES["photo"]["size"] > 200000) {
+        if ($_FILES["photo"]["size"] > 2000000) {
             echo "Error: File is too large.";
             $uploadOk = 0;
         }
