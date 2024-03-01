@@ -159,23 +159,79 @@
 				?>
 					<tr>
 						<td><?php echo $row['class']; ?></td>
+						<!-- <td>
+							<form action="?page=school/class_student_list" id="class_student_list" method="post">
+								<input type="hidden" name="school_id" value="<?php echo $school_id ?>">
+								<input type="hidden" name="class" value="<?php echo $row['class']; ?>">
+
+								<input type="submit" class="btn btn-sm btn-primary" value="View / Update Students" />
+							</form>
+						</td> -->
 						<td>
 							<!-- <button class="openModalBtn">Select Template</button> -->
 							<span id="button_flex">
-								
-							<!-- shows js popup for template selection -->
-							<!-- previous action url school/id_cards_pdf/main/template_1.php -->
-								<!-- <button type="button" class="btn btn-success openModalBtn" id="submitBtn">Select Template</button> -->
-								<form action="<?php echo base_url?>admin/choose_template.php" method="post">
-									<input type="hidden" name="school_id" value="<?php echo $school_id; ?>">
+
+								<button type="button" class="btn btn-success openModalBtn" id="submitBtn">Select Template</button>
+								<form action="school/id_cards_pdf/main/template_1.php" id="edit_student" method="post">
+									<input type="hidden" name="school_id" value="<?php echo $school_id ?>">
 									<input type="hidden" name="class" value="<?php echo $row['class']; ?>">
 									<input type="hidden" name="chosen_template" value="1" id="chosen_template">
 									<!-- POPUP HTML CODE -->
-									
-									<input type="submit" class="btn btn-sm btn-primary" value="Select Template" /> <!-- Moves to templates page -->
+									<div id="myModal" class="modal">
+											<div class="modal-content">
+	
+											<!-- CROSS BUTTON	 -->
+											<button onclick="cross(event)" class="close">&times;</button>
+	
+												<h2>Select The Template</h2>
+												<div id="imageGallery">
+													<div class="image-item ">
+														<img src="school/id_cards_pdf/main/template_images/1.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="1">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/3.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="3">
+													</div>
+													<div class="image-item ">
+														<img src="school/id_cards_pdf/main/template_images/2.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="2">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/4.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="4">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/5.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="5">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/7.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="7">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/6.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="6">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/8.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="8">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/9.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="9">
+													</div>
+													<div class="image-item ">
+													<img src="school/id_cards_pdf/main/template_images/10.png" alt="template1" srcset="">
+														<input type="radio" name="template" id="10">
+													</div>
+												
+												</div>
+												<button onclick="selectTemplate(event)" id="submitBtn">Submit</button>
+											</div>
+									</div>
+									<!-- <input type="submit" class="btn btn-sm btn-primary" value="Generate " /> -->
 								</form>
-								
-									
 							</span>
 							
 
@@ -213,10 +269,38 @@
 	})
 
 	$('#choose_school').on('change', function() {
+  	console.log(this.value);
 		$('#school_id').val(this.value);
 	});
 
-	
+	document.querySelectorAll('.openModalBtn').forEach(button => {
+		button.addEventListener('click', function(event) {
+			event.preventDefault();
+			const row = this.closest('tr');
+			const rowIndex = Array.from(row.parentElement.children).indexOf(row);
+			showModal(rowIndex);
+		});
+	});
+
+	function showModal(rowIndex) {
+		document.getElementById('myModal').style.display = "block";
+		// document.getElementById('myModal').style.display = "none";
+	}
+	document.querySelector('.close').addEventListener('click', function() {
+		document.getElementById('myModal').style.display = "none";
+	});
+	function cross(event){
+		event.preventDefault();	
+	}
+
+	function selectTemplate(event){
+		
+		const formElement = document.getElementById('chosen_template');
+		let chosenTemplate = document.querySelector('input[name="template"]:checked').id;
+		
+		formElement.value = chosenTemplate;
+		// event.preventDefault();
+	}
 
 	
 </script>

@@ -10,10 +10,44 @@ Class Users extends DBConnection {
 	public function __destruct(){
 		parent::__destruct();
 	}
+
+	public function edit_school() {
+		$firstname = $_POST['firstname'];
+		$username = $_POST['username'];
+		$id = $_POST['id'];
+
+		$sql = "UPDATE users SET firstname='$firstname', username='$username' WHERE id=$id";
+		$result = $this->conn->query($sql);
+
+		if($result === TRUE) {
+			return 1;
+		}
+
+	}
+
+	public function edit_school_password() {
+		
+		$password = $_POST['password'];
+		$id = $_POST['id'];
+
+		$password = md5($password);
+
+		
+		$sql = "UPDATE users SET `password`='$password' WHERE id=$id";
+		
+		$result = $this->conn->query($sql);
+
+		if($result === TRUE) {
+			return 1;
+		}
+	}
+
 	public function save_users(){
 		extract($_POST);
 		$data = '';
+
 		$chk = $this->conn->query("SELECT * FROM `users` where username ='{$username}' ".($id>0? " and id!= '{$id}' " : ""))->num_rows;
+
 		if($chk > 0){
 			return 3;
 			exit;
@@ -215,6 +249,12 @@ switch ($action) {
 	break;
 	case 'add-school':
 		echo $users->add_school();
+	break;
+	case 'edit-school-password':
+		echo $users->edit_school_password();
+	break;
+	case 'edit-school':
+		echo $users->edit_school();
 	break;
 	case 'fsave':
 		echo $users->save_fusers();

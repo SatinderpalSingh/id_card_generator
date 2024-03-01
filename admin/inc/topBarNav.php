@@ -121,9 +121,15 @@
           </a>
         </button>
 
-        <button type="button" class="btn btn-info">
+        <!-- <button type="button" class="btn btn-info">
           <a href="<?php echo base_url ?>admin/?page=generate/list" class="nav-link collapsed">
             <span>GENERATE ID LIST</span>
+          </a>
+        </button> -->
+
+        <button type="button" class="btn btn-info">
+          <a href="<?php echo base_url ?>admin/?page=manage-schools" class="nav-link collapsed">
+            <span>MANAGE SCHOOL USERS</span>
           </a>
         </button>
 

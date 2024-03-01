@@ -42,8 +42,11 @@
       $signature .= "admin/school/id_cards_pdf/main/Images/placeholder-signature.png";
     }
     clearstatcache();
-
-    if($i % 5 == 0 && $i != 0) $table .= "</tr><tr>";
+    $cols = 5;
+    if($chosen_template[0] =='h'){
+        $cols =2;
+    }
+    if($i % $cols == 0 && $i != 0) $table .= "</tr><tr>";
     $table .= 
       "<td>
         <div class='first_section'>
@@ -95,6 +98,7 @@
   $dompdf->loadHtml($html_content);
   // (Optional) Setup the paper size and orientation
   $dompdf->setPaper('A4', 'landscape');
+  // $dompdf->setPaper('A4', 'portrait');
   // Render the HTML as PDF
   $dompdf->render();
   // Output the generated PDF to Browser
