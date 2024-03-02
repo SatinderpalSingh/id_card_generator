@@ -114,6 +114,9 @@
 			width: 110vw;
 		}
 }
+#get_classes_btn{
+	margin: 10px 10px 10px 	0px;
+}
 </style>
 <div class="card card-outline card-primary" id="classes_list">
 	<div class="card-header">
@@ -126,9 +129,7 @@
 		<div class="container-fluid">
 			<div class="row row-cols-3 gx-3">
 
-			<h3>Select School to get class list and print ID Card</h3>
-			
-				
+			<h3>Select School to get class list and print ID Card</h3>	
 				<?php
 						$school_id = $_POST['school_id'] ?? '1';
 						
@@ -146,7 +147,7 @@
 					<br>
 					<form action="" method="POST">
 						<input type="hidden" name="school_id" id="school_id" value="1">
-						<button type="submit" class="btn btn-primary">Get Classes</button>
+						<button type="submit" id="get_classes_btn" class="btn btn-primary">Get Classes</button>
 					</form>
 					<br>
 					<?php

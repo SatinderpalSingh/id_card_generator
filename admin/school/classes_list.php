@@ -114,6 +114,9 @@
 			width: 110vw;
 		}
 }
+#heading{
+	font-size: 3rem;
+}
 </style>
 <div class="card card-outline card-primary" id="classes_list">
 	<div class="card-header">
