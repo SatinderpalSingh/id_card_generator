@@ -1,0 +1,154 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+table,
+th,
+td {
+  border: 0.7mm solid black;
+}
+
+table {
+  border-spacing: 1.5mm;
+}
+
+td {
+  border-width: 1px;
+  border-color: black;
+  height: 54mm;
+  width: 84mm;
+  background-image: url("../template_images/h1.png");
+  background-size: 101%;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  overflow: hidden;
+}
+.sizing {
+}
+.first_section {
+  position: relative;
+  /* bottom: 8mm; */
+  height: 1mm;
+}
+#institute_logo {
+  position: relative;
+  width: 12mm;
+  height: 12mm;
+  border-radius: 7.64mm;
+  top: 0.5mm;
+  left: 4mm;
+}
+#institute_name {
+  height: 7.9mm;
+  width: 54.5mm;
+  position: relative;
+  bottom: 8.5mm;
+  left: 28mm;
+  font-size: 4.1mm;
+  text-align: left;
+  display: block;
+  line-height: 5mm;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-weight: bolder;
+  color: white;
+}
+.second_section {
+  text-transform: uppercase;
+  position: relative;
+  height: 43mm;
+  text-wrap: wrap;
+  padding-top: 3%;
+  overflow: hidden;
+}
+
+#child-image {
+  width: 19.5mm;
+  height: 24.3mm;
+  margin-left: 4mm;
+  border-radius: 1.4mm;
+  position: relative;
+  top: 14.2mm;
+  float: left;
+}
+.details {
+  float: left;
+}
+.child-name {
+  color: red;
+  font-size: 3.2mm;
+  /* margin-left: 10mm; */
+  position: relative;
+  padding-left: 1mm;
+  padding-right: 1mm;
+  top: 6mm;
+  font-weight: bold;
+  text-align: center;
+}
+
+.child-class {
+  font-size: 2.2mm;
+  margin-bottom: 0.9mm;
+  position: relative;
+  text-align: center;
+  top: 5.5mm;
+  font-weight: bold;
+}
+
+.child-details {
+  font-size: 2.5mm;
+  text-align: left;
+  padding-left: 25mm;
+  padding-right: 8mm;
+  position: relative;
+  top: 5mm;
+  text-wrap: wrap;
+  line-height: 3.4mm;
+}
+
+.red_details {
+  color: red;
+  font-weight: bold;
+  text-wrap: wrap;
+}
+#stud_address {
+  text-align: center;
+}
+#little_space {
+  margin-right: 1mm;
+}
+
+#space-left {
+  margin-left: 1mm;
+}
+.third_section {
+  position: relative;
+  font-size: 2.5mm;
+  text-align: center;
+  padding-top: 1%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  height: 2mm;
+  left: 16%;
+  bottom: 5mm;
+}
+#principal_sign {
+  position: relative;
+  top: -5.7mm;
+  right: -3.5mm;
+}
+#principal_sign span {
+  font-size: 2.2mm;
+  position: relative;
+  left: 62%;
+  top: 1mm;
+  color: rgb(12, 129, 202);
+  font-weight: bolder;
+}
+
+#principal_sign img {
+  height: 4mm;
+  width: 12mm;
+  position: relative;
+  left: 80.5%;
+  top: -1mm;
+}
