@@ -71,6 +71,15 @@
 		font-size: 40px;
 	}
 
+	.templates_heading {
+		background: #481CFF;
+		background: linear-gradient(to right, #481CFF 0%, #18FFEE 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		font-size: 3.5em;
+	}
+
 	#imageGallery {
 		display: flex;
 		justify-content: center;
@@ -79,14 +88,16 @@
 		flex-direction: row;
 
 	}
-	.potrait{
+
+	.potrait {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 	}
-	.landscape{
+
+	.landscape {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -105,13 +116,15 @@
 		height: 85mm;
 		border: 1px solid black;
 	}
-	.image-item-horizontal{
+
+	.image-item-horizontal {
 		margin: 5px;
 		display: flex;
 		flex-direction: column;
 		position: relative;
 	}
-	.image-item-horizontal img{
+
+	.image-item-horizontal img {
 		width: 85mm;
 		height: 50mm;
 		border: 1px solid black;
@@ -122,25 +135,43 @@
 		height: 20px;
 	}
 
+	.image-item-horizontal input[type=radio] {
+		margin-top: 10px;
+		height: 20px;
+	}
+
 	.checkbox-item {
 		margin-top: 10px;
 	}
 
 	#submitBtn {
-		width: 144px;
-		height: 34px;
+		width: 173px;
+    height: 40px;
+    background: #25d170;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
 	}
 
-
-	#test_image img {
-		height: 100px;
-		width: 100px;
+	#landscape_heading {
+		margin-top: 25px;
 	}
 
-	#button_flex {
-		display: flex;
-		gap: 5px;
-	}
 
 	@media (max-width: 478px) {
 
@@ -163,7 +194,7 @@
 			<section class="content  text-dark">
 				<div class="container-fluid">
 
-					<h2>Select The Template</h2>
+					<h2 class="templates_heading">Portrait Templates</h2>
 					<div id="imageGallery">
 						<div class="potrait">
 							<div class="image-item ">
@@ -207,18 +238,27 @@
 								<input type="radio" name="template" id="10">
 							</div>
 						</div>
+						<h2 class="templates_heading">Landscape Templates</h2>
 						<div class="landscape">
 							<div class="image-item-horizontal">
-							<img src="school/id_cards_pdf/main/template_images/h1.png" alt="template1" srcset="">
+								<img src="school/id_cards_pdf/main/template_images/h1.png" alt="template1" srcset="">
 								<input type="radio" name="template" id="h1">
 							</div>
 							<div class="image-item-horizontal">
-							<img src="school/id_cards_pdf/main/template_images/h2.png" alt="template1" srcset="">
+								<img src="school/id_cards_pdf/main/template_images/h2.png" alt="template1" srcset="">
 								<input type="radio" name="template" id="h2">
 							</div>
 							<div class="image-item-horizontal">
-							<img src="school/id_cards_pdf/main/template_images/h3.png" alt="template1" srcset="">
+								<img src="school/id_cards_pdf/main/template_images/h3.png" alt="template1" srcset="">
 								<input type="radio" name="template" id="h3">
+							</div>
+							<div class="image-item-horizontal">
+								<img src="school/id_cards_pdf/main/template_images/h4.png" alt="template1" srcset="">
+								<input type="radio" name="template" id="h4">
+							</div>
+							<div class="image-item-horizontal">
+								<img src="school/id_cards_pdf/main/template_images/h5.png" alt="template1" srcset="">
+								<input type="radio" name="template" id="h5">
 							</div>
 						</div>
 
