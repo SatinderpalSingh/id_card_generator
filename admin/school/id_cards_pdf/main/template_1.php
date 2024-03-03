@@ -44,7 +44,7 @@
     clearstatcache();
     $cols = 5;
     if($chosen_template[0] =='h'){
-        $cols =2;
+        $cols =3;
     }
     if($i % $cols == 0 && $i != 0) $table .= "</tr><tr>";
     $table .= 
