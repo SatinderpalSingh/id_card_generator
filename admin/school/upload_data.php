@@ -1,4 +1,8 @@
+
 <?php
+
+// print_r($_SESSION['userdata']);
+$logged_in_school_id = $_SESSION['userdata']['id'];
 /*// Database connection parameters
 $host = 'localhost';
 $username = 'phpmyadmin';
@@ -21,8 +25,13 @@ echo '
 	
 		</div>
 	</div>
-<br/>
-<br/>
+<br>
+Your School ID is: <b>'.$logged_in_school_id.'</b>
+Please ensure the School ID is the same as that in the CSV file.
+<br> <br>
+<a href="./template.csv">Click Here to Download CSV template</a>
+
+<br>
     <form action="?page=school/upload_data" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".csv">
         <input type="hidden" value="upload_data_submit" name="upload_data_submit">
@@ -33,6 +42,7 @@ echo '
 ';
 
 // Check if the form is submitted
+
 if (isset($_POST['submit']) && isset($_POST['upload_data_submit'])) {
     // Check for file upload errors
     if ($_FILES['file']['error'] !== UPLOAD_ERR_OK) {
