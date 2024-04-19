@@ -1,4 +1,52 @@
+<style>
+    .upload_data_schoolID {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
 
+    #upload_data_others {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    #scv_button {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color: #e8e8e8;
+        --button_outline_color: #000000;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+        padding: 0px;
+    }
+
+    .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 8px;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+    }
+
+    #scv_button:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+    }
+
+    #scv_button:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+    }
+</style>
 <?php
 
 // print_r($_SESSION['userdata']);
@@ -26,19 +74,26 @@ echo '
 		</div>
 	</div>
 <br>
-Your School ID is: <b>'.$logged_in_school_id.'</b>
-Please ensure the School ID is the same as that in the CSV file.
+<div class="upload_data_schoolID">
+Your School ID is : <b>' . $logged_in_school_id . '</b>
+</div>
+<div id="upload_data_others">
+
+Please ensure the School ID is the same as that in the CSV file.    
 <br> <br>
 <a href="./template.csv">Click Here to Download CSV template</a>
+<br> <br>
+<form action="?page=school/upload_data" method="post" enctype="multipart/form-data">
+<input type="file" name="file" accept=".csv">
+<input type="hidden" value="upload_data_submit" name="upload_data_submit">
 
-<br>
-    <form action="?page=school/upload_data" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".csv">
-        <input type="hidden" value="upload_data_submit" name="upload_data_submit">
-        <button type="submit" name="submit">Import CSV</button>
-        
-    </form>
-    <br/><br/>
+<button type="submit" name="submit" id="scv_button" >
+  <span class="button_top"> Import CSV
+  </span>
+</button>
+
+</form>
+</div>
 ';
 
 // Check if the form is submitted

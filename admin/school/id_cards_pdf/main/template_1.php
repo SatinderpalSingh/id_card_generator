@@ -108,6 +108,6 @@
   // Render the HTML as PDF
   $dompdf->render();
   // Output the generated PDF to Browser
-  // $dompdf->stream("", array("Attachment" => false));
-  $dompdf->stream();
+  $dompdf->stream("", array("Attachment" => false));
+  // $dompdf->stream();
 ?>
